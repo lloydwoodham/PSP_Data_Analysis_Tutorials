@@ -24,17 +24,9 @@ for i, component in enumerate(['X', 'Y', 'Z']):
     ax[1].plot(time, cdf.varget('VEL_RTN_SUN')[:, i], label=f"$V_{{{component}}}$")
 ax[2].plot(time, mag_vel, label='|V|')
 
-ax[0].set(
-    title=f'PSP SWP SPI data from {load_date.date()}',
-    ylabel=f'$cm^{3}$'
-)
-ax[1].set(
-    ylabel=f'km/s'
-)
-ax[-1].set(
-    xlabel='Time',
-    ylabel=f'km/s'
-)
+ax[0].set(title=f'PSP SWP SPI data from {load_date.date()}', ylabel='$cm^3$')
+ax[1].set(ylabel='km/s')
+ax[-1].set(xlabel='Time', ylabel='km/s')
 ax[1].legend()
 plt.tight_layout()
 plt.show()
